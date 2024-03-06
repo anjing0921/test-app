@@ -30,6 +30,10 @@ function App() {
         setDisabled(true)
         }
     setText(e.target.value)
+    if (toDo.findIndex((p) => p.text === e.target.value.trim()) !== -1) {
+      validationErrors.isSame = `${e.target.value} is already in the list `
+      setDisabled(true)
+    }
     setErrors(validationErrors)
   }
 
