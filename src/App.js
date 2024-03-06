@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, getAllToDo , updateToDo, deleteToDo} from "./utils/HandleApi";
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
             onChange={handleChange}
           />
             {errors.todo && <span className="error">{errors.todo}</span>} 
+            {errors.isSame && <span className="error">{errors.isSame}</span>} 
             {isDisabled ?
             <button className="hide_button" disabled={isDisabled}>Add</button> 
             :<button 
