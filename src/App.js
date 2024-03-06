@@ -36,7 +36,10 @@ function App() {
     }
     setErrors(validationErrors)
   }
-
+  const handleClickAway = () =>{
+    getAllToDo(setToDo)
+    setErrors({})
+  }
   const handleSubmit = () =>{
 
     addToDo(text, setText, setToDo)
