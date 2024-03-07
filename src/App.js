@@ -39,6 +39,7 @@ function App() {
   const handleClickAway = () =>{
     getAllToDo(setToDo)
     setErrors({})
+    setDisabled(false)
   }
   const handleSubmit = () =>{
 
